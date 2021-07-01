@@ -1,5 +1,11 @@
 # @urql/core
 
+## 2.1.5
+
+### Patch Changes
+
+- ⚠️ Fix accidental change in passive `stale: true`, where a `cache-first` operation issued by Graphcache wouldn't yield an affected query and update its result to reflect the loading state with `stale: true`. This is a regression from `v2.1.0` and mostly becomes unexpected when `cache.invalidate(...)` is used, by [@kitten](https://github.com/kitten) (See [#1755](https://github.com/FormidableLabs/urql/pull/1755))
+
 ## 2.1.4
 
 ### Patch Changes
